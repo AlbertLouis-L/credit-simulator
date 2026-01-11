@@ -20,7 +20,16 @@ public class CreditCalculator {
         ArrayList<MonthlyInstallment> result = new ArrayList<>();
 
         for (int i = 1; i <= tenorPinjaman; i++) {
-            bunga += (i % 2 == 0) ? 0.5 : 0.1;
+           if(i%2 == 0){
+                bunga += 0.1;
+            }else{
+                if(i == 1){
+                    bunga = jenisKendaraan.equalsIgnoreCase("motor") ? 9 : 8;
+                }else{
+                    bunga += 0.5; 
+                }
+               
+            }
 
             double totalPinjaman = pokokPinjaman * (1 + bunga / 100);
             double monthlyInstallment =

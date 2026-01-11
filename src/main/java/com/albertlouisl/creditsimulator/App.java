@@ -5,12 +5,19 @@ import com.albertlouisl.creditsimulator.controller.CreditController;
 
 public class App {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        CreditController CDController = new CreditController();
+        
+        if (args.length > 0) {
+            CDController.loadSheetFromFile(args[0]);
+        } else {
+            // normal interactive menu
+        }
         System.out.println("----------Credit Simulator Menu----------");
         System.out.println(">> show");
         System.out.println(">> exit");
 
-        Scanner scanner = new Scanner(System.in);
-        CreditController CDController = new CreditController();
+        
 
         while (true) {
             System.out.print("=> ");
@@ -22,10 +29,14 @@ public class App {
 
             switch (input.toLowerCase()) {
                 case "show":
+                    System.out.println("----------Loading Existing Calculation----------\n");
+                    CDController.handleLoadExistingCalculation();
+
                     showMenu();
                     break;
 
                 case "1":
+                    
                     CDController.handleCreditSimulation(scanner);
                     showMenu();
                     break;
@@ -44,6 +55,10 @@ public class App {
                 case "exit":
                     System.out.println("Exit Complete. Terima kasih");
                     return;
+
+                // case "load":
+                //     CDController.handleLoadExistingCalculation();
+                //     break;
             
                 default:
                     System.out.println("Menu tidak diketahui. Silahkan ketik pilihan di atas.");

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class SheetService {
 
-    private final String folderPath = "sheets"; // folder to store files
+    private final String folderPath = new File("").getAbsolutePath() + "/sheets"; // folder to store files
 
     public SheetService() {
         File folder = new File(folderPath);

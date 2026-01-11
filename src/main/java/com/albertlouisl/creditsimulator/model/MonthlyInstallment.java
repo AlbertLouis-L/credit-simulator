@@ -11,15 +11,9 @@ public class MonthlyInstallment {
         this.monthlyInstallment = monthlyInstallment;
     }
 
-    public int getTahun() {
-        return tahun;
-    }
+    //Getters
+    public int getTahun() { return tahun; }
+    public float getBunga() { return bunga; }
+    public float getMonthlyInstallment() { return monthlyInstallment; }
 
-    public float getBunga() {
-        return bunga;
-    }
-
-    public float getMonthlyInstallment() {
-        return monthlyInstallment;
-    }
 }
