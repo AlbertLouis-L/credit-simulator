@@ -32,3 +32,10 @@ Langkah-Langkah pengunaan aplikasi:
 6c. Sesudah user memilih sheets dengan nomor, aplikasi akan menampilkan hasil simulasi kredit sheets yang dipilih.
 
 7. user bisa ketik 4 atau exit untuk keluar dari aplikasi.
+
+# Docker Images
+Pull image: docker pull albertlouisl/credit-simulator:latest
+Run: docker run -it --rm albertlouisl/credit-simulator:latest
+
+# GitHub link
+https://github.com/AlbertLouis-L/credit-simulator
