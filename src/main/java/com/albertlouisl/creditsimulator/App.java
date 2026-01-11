@@ -31,16 +31,16 @@ public class App {
                     break;
 
                 case "2":
-                    // CDController.saveCurrentSheet(scanner);
+                    CDController.saveCurrentSheet(scanner);
                     showMenu();
                     break;
 
                 case "3":
-                    // CDController.switchSheet(scanner);
+                    CDController.switchSheet(scanner);
                     showMenu();
                     break;
 
-
+                case "4":
                 case "exit":
                     System.out.println("Exit Complete. Terima kasih");
                     return;

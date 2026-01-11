@@ -11,7 +11,7 @@ import com.albertlouisl.creditsimulator.model.MonthlyInstallment;
 public class ViewMenu {
 
     public void showResult(ArrayList<MonthlyInstallment> result) {
-        System.out.println("=== Hasil Simulasi Kredit ===");
+        System.out.println("\n=== Hasil Simulasi Kredit ===");
 
         Locale indonesia = Locale.forLanguageTag("id-ID");
         NumberFormat rupiah = NumberFormat.getCurrencyInstance(indonesia);
@@ -148,5 +148,5 @@ public class ViewMenu {
     }
 
 
-    
+
 }
