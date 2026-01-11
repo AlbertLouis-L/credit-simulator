@@ -1,6 +1,7 @@
 package com.albertlouisl.creditsimulator.view;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 import java.text.NumberFormat;
@@ -127,4 +128,25 @@ public class ViewMenu {
             System.out.println("DP tidak memenuhi syarat.");
         }
     }
+
+    public void displaySheet(List<MonthlyInstallment> sheet) {
+        System.out.println("=== Loaded Sheet ===");
+        Locale indonesia = Locale.forLanguageTag("id-ID");
+        NumberFormat rupiah = NumberFormat.getCurrencyInstance(indonesia);
+
+        for (MonthlyInstallment m : sheet) {
+            String cicilan = rupiah.format(m.getMonthlyInstallment());
+            String bunga = formatBunga(m.getBunga());
+
+            System.out.printf(
+                "tahun %d : %s/bln , Suku Bunga : %s%%%n",
+                m.getTahun(),
+                cicilan,
+                bunga
+            );
+        }
+    }
+
+
+    
 }
